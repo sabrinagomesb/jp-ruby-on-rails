@@ -1,14 +1,29 @@
 <p style="color: green"><%= notice %></p>
 
-<h1>Coins</h1>
+<h1>Moedas</h1>
 
-<div id="coins">
-  <% @coins.each do |coin| %>
-    <%= render coin %>
-    <p>
-      <%= link_to "Show this coin", coin %>
-    </p>
-  <% end %>
-</div>
+<table>
+  <thead>
+    <tr>
+      <th>Descrição</th>
+      <th>Sigla</th>
+      <th>Imagem</th>
+      <th>Ações</th>
+    </tr>
+  </thead>
 
-<%= link_to "New coin", new_coin_path %>
+  <tbody>
+    <% @coins.each do |coin| %>
+      <tr>
+        <td><%= coin.description %></td>
+        <td><%= coin.acronym %></td>
+        <td> <%= image_tag coin.url_image, width:25, height:25 %> </td>
+        <td><%= link_to 'Detalhes', coin %></td>
+        <td><%= link_to 'Editar', edit_coin_path(coin) %></td>
+        <td><%= link_to 'Excluir', coin, method: :delete, data: { confirm: 'Tem certeza?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<%= link_to "Cadastrar Moeda", new_coin_path %>
