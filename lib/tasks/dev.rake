@@ -1,28 +1,40 @@
+# frozen_string_literal: true
+
 namespace :dev do
   desc 'Configura o ambiente de desenvolvimento'
   task setup: :environment do
     if Rails.env.development?
-      spinner = TTY::Spinner.new("[:spinner] Dropping DB...")
-      spinner.auto_spin
-      %x(rails db:drop)
-      spinner.success("(successful)")
+      show_spinner('Dropping DB...') do
+        `rails db:drop`
+      end
 
-      spinner = TTY::Spinner.new("[:spinner] Creating DB...")
-      spinner.auto_spin
-      %x(rails db:create)
-      spinner.success("(successful)")
+      show_spinner("Creating DB...") do
+        %x(rails db:create)
+      end
 
-      spinner = TTY::Spinner.new("[:spinner] Migrating DB...")
-      spinner.auto_spin
-      %x(rails db:migrate)
-      spinner.success("(successful)")
+      show_spinner("Migrating DB...") do
+        %x(rails db:migrate)
+      end
 
-      spinner = TTY::Spinner.new("[:spinner] Seeding DB...")
-      spinner.auto_spin
-      %x(rails db:seed)
-      spinner.success("(successful)")
+      show_spinner("Seeding DB...") do
+        %x(rails db:seed)
+      end
+
+      # EXEMPLO SEM O MÉTODO show_spinner - O código estava repetindo para cada comando db.
+      # spinner = TTY::Spinner.new("[:spinner] Dropping DB...")
+      # spinner.auto_spin
+      # %x(rails db:drop)
+      # spinner.success("(successful)")
+
     else
       puts "Não é possível executar este comando em ambiente de #{Rails.env}"
     end
+  end
+
+  def show_spinner(start_msg, end_msg = 'successful')
+    spinner = TTY::Spinner.new("[:spinner] #{start_msg}")
+    spinner.auto_spin
+    yield
+    spinner.success("(#{end_msg})")
   end
 end
