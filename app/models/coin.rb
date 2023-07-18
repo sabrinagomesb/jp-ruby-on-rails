@@ -2,5 +2,5 @@
 
 class Coin < ApplicationRecord
   # chave estrangeira para mining_type
-  belongs_to :mining_type
+  belongs_to :mining_type, optional: true
 end
