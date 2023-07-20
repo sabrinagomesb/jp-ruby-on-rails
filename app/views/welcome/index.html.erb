@@ -1,8 +1,12 @@
-<h1>Seja Bem Vinda!</h1>
+<h1>Seja Bem Vinda, <%= @nome %>!</h1>
+<p>O idioma que está sendo utilizado nessa aplicação é: <strong> <%= I18n.locale %> </strong> </p>
+
 <p><strong>Data:</strong> <%= br_date(Date.today)  %></p>
 
-<ul>
-  <li>
-    <%= link_to 'Cadastrar Moedas', 'coins_path' %>
-  </li>
-</ul>
+<h2><%= t(:hello) %></h2>
+
+<%= render 'menu' %>
+
+<p>
+  Você está em ambiente de <strong><%= environment_rails %> </strong>
+</p>
