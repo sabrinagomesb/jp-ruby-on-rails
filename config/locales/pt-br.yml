@@ -29,18 +29,32 @@
 # To learn more, please read the Rails Internationalization guide
 # available at https://guides.rubyonrails.org/i18n.html.
 
-en:
-  hello: 'Hello world'
+pt-br:
+  hello: 'Olá, mundo!'
   links:
-    edit: 'Edit'
-    show: 'Show'
-    delete: 'Delete'
-    new_mining_type: 'New mining type'
-    new_coin: 'New coin'
+    edit: 'Editar'
+    show: 'Detalhes'
+    delete: 'Apagar'
+    new_mining_type: 'Cadastrar Tipo de Mineração'
+    new_coin: 'Cadastrar Moeda'
   thead:
-    coins: 'Coins'
-    mining_types: 'Mining Types'
-    description: 'Description'
-    acronym: 'Acronym'
-    image: 'Image'
-    actions: 'Actions'
+    coins: 'Moedas'
+    mining_types: 'Tipos de Minerações'
+    description: 'Descrição'
+    acronym: 'Sigla'
+    image: 'Imagem'
+    actions: 'Ações'
+  activerecord:
+    models:
+      coin: Moeda
+      mining_type: Tipo de Mineração
+    attributes:
+      coin:
+        description: Descrição
+        acronym: Sigla
+        url_image: URL da Imagem
+        mining_type: Tipo de Mineração
+        mining_type_id: ID do Tipo de Mineração
+      mining_type:
+        description: Descrição
+        acronym: Sigla
