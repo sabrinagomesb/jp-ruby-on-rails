@@ -13,6 +13,11 @@ module CryptoWallet
     # Initialize configuration defaults for originally generated Rails version.
     config.load_defaults 7.0
 
+    # Permited locales available for the application
+
+    # Set default locale
+    config.i18n.default_locale = 'pt-br'
+
     # Configuration for the application, engines, and railties goes here.
     #
     # These settings can be overridden in specific environments using the files

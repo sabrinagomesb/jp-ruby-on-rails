@@ -1,14 +1,27 @@
 <p style="color: green"><%= notice %></p>
 
-<h1>Mining types</h1>
+<h1><%= t('thead.mining_types') %></h1>
 
-<div id="mining_types">
-  <% @mining_types.each do |mining_type| %>
-    <%= render mining_type %>
-    <p>
-      <%= link_to "Show this mining type", mining_type %>
-    </p>
-  <% end %>
-</div>
+<table>
+  <thead>
+    <tr>
+      <th><%= t('thead.description') %></th>
+      <th><%= t('thead.acronym') %></th>
+      <th><%= t('thead.actions') %></th>
+    </tr>
+  </thead>
 
-<%= link_to "New mining type", new_mining_type_path %>
+  <tbody>
+    <% @mining_types.each do |mining_type| %>
+      <tr>
+        <td><%= mining_type.description %></td>
+        <td><%= mining_type.acronym %></td>
+        <td><%= link_to t('links.show'), mining_type %></td>
+        <td><%= link_to t('links.edit'), edit_mining_type_path(mining_type) %></td>
+        <td><%= link_to t('links.delete'), mining_type, method: :delete, data: { confirm: 'Tem certeza?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<%= link_to t('links.new_mining_type'), new_mining_type_path %>
