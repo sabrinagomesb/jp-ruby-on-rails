@@ -5,8 +5,8 @@
 <table>
   <thead>
     <tr>
-      <th><%= t('thead.description') %></th>
-      <th><%= t('thead.acronym') %></th>
+      <th><%= @coins.human_attribute_name(:description) %></th>
+      <th><%= @coins.human_attribute_name(:acronym) %></th>
       <th><%= t('thead.image') %></th>
       <th><%= t('thead.actions') %></th>
     </tr>

@@ -30,6 +30,7 @@
 # available at https://guides.rubyonrails.org/i18n.html.
 
 pt-br:
+  actual_locale: 'Português (Brasil)'
   hello: 'Olá, mundo!'
   links:
     edit: 'Editar'
@@ -46,8 +47,12 @@ pt-br:
     actions: 'Ações'
   activerecord:
     models:
-      coin: Moeda
-      mining_type: Tipo de Mineração
+      coin:
+        one: Moeda
+        other: Moedas
+      mining_type:
+        one: Tipo de Mineração
+        other: Tipos de Mineração
     attributes:
       coin:
         description: Descrição
