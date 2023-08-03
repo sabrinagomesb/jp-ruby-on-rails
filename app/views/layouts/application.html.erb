@@ -12,5 +12,12 @@
 
   <body>
     <%= yield %>
+    <%# # index.html.erb, edit.html.erb %>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function() {
+          $.notify("Conexão realizada com sucesso!", "success");
+        });
+    </script>
   </body>
 </html>
