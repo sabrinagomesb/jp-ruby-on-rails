@@ -2,7 +2,7 @@
 
 <h1><%= t('thead.coins') %></h1>
 
-<table>
+<table class="table table-striped">
   <thead>
     <tr>
       <th><%= @coins.human_attribute_name(:description) %></th>
@@ -12,7 +12,7 @@
     </tr>
   </thead>
 
-  <tbody>
+  <tbody class="table-group-divider">
     <% @coins.each do |coin| %>
       <tr>
         <td><%= coin.description %></td>
