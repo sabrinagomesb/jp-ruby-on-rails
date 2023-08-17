@@ -1,15 +1,14 @@
-<p> <%= link_to "Português (Brasil)", root_path(locale: 'pt-br') %> </p>
-<p> <%= link_to "English", root_path(locale: 'en') %> </p>
+<div class="jumbotron">
+  <h1 class="display-4">Seja Bem Vindo ao Cripto Wallet!</h1>
+  <p class="lead">Aplicação desenvolvida para estudo de Ruby on Rails.</p>
+  <hr class="my-4">
+  <p>Aqui é possível cadastrar criptomoedas e seus tipos de mineração.</p>
 
-<h1>Seja Bem Vinda, <%= @nome %>!</h1>
-<p>O idioma que está sendo utilizado nessa aplicação é: <strong> <%= t('actual_locale') %> </strong> </p>
+  <%= render 'menu' %>
 
-<p><strong>Data:</strong> <%= br_date(Date.today)  %></p>
+  <h3><%= t(:hello) %></h3>
 
-<h2><%= t(:hello) %></h2>
+  <p>O idioma que está sendo utilizado nessa aplicação é: <strong> <%= t('actual_locale') %> </strong> </p>
 
-<%= render 'menu' %>
-
-<p>
-  Você está em ambiente de <strong><%= environment_rails %> </strong>
-</p>
+  <p><strong>Data:</strong> <%= br_date(Date.today)  %></p>
+</div>
