@@ -30,7 +30,11 @@
 # available at https://guides.rubyonrails.org/i18n.html.
 
 en:
-  actual_locale: 'English'
+  current_locale: 'English'
+  welcome: 'Welcome to Crypto Wallet'
+  messages:
+    welcome: 'Application developed for Ruby on Rails study.'
+    menu: "It's possible to register cryptocurrencies and their mining types. To get started, choose an option below."
   hello: 'Hello world'
   links:
     edit: 'Edit'

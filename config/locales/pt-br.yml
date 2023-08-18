@@ -30,7 +30,11 @@
 # available at https://guides.rubyonrails.org/i18n.html.
 
 pt-br:
-  actual_locale: 'Português (Brasil)'
+  current_locale: 'Português (Brasil)'
+  welcome: 'Bem-vindo ao Crypto Wallet'
+  messages:
+    welcome: 'Aplicação desenvolvida para estudo de Ruby on Rails.'
+    menu: 'Aqui é possível cadastrar criptomoedas e seus tipos de mineração. Para começar escolha uma opção abaixo.'
   hello: 'Olá, mundo!'
   links:
     edit: 'Editar'
