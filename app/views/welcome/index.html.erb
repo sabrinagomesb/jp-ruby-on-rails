@@ -1,14 +1,16 @@
 <div class="jumbotron">
-  <h1 class="display-4">Seja Bem Vindo ao Cripto Wallet!</h1>
-  <p class="lead">Aplicação desenvolvida para estudo de Ruby on Rails.</p>
+  <h1 class="display-4"><%= t('welcome') %></h1>
+
+  <p class="lead"> <%= t('messages.welcome') %></p>
   <hr class="my-4">
-  <p>Aqui é possível cadastrar criptomoedas e seus tipos de mineração.</p>
+
+  <p><%= t('messages.menu ') %></p>
 
   <%= render 'menu' %>
 
   <h3><%= t(:hello) %></h3>
 
-  <p>O idioma que está sendo utilizado nessa aplicação é: <strong> <%= t('actual_locale') %> </strong> </p>
+  <p>O idioma que está sendo utilizado nessa aplicação é: <strong> <%= t('current_locale') %> </strong> </p>
 
   <p><strong>Data:</strong> <%= br_date(Date.today)  %></p>
 </div>
