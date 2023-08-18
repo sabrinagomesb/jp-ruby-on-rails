@@ -3,8 +3,7 @@
 <%= render @mining_type %>
 
 <div>
-  <%= link_to "Edit this mining type", edit_mining_type_path(@mining_type) %> |
-  <%= link_to "Back to mining types", mining_types_path %>
+  <%= link_to t('links.edit'), edit_mining_type_path(@mining_type), class: 'btn btn-outline-primary' %>
+  <%= link_to t('links.back'), mining_types_path, class: 'btn btn-outline-primary' %>
 
-  <%= button_to "Destroy this mining type", @mining_type, method: :delete %>
 </div>

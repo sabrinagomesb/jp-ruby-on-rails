@@ -1,17 +1,17 @@
 <div id="<%= dom_id coin %>">
-  <p>
-    <strong>Description:</strong>
-    <%= coin.description %>
-  </p>
 
-  <p>
-    <strong>Acronym:</strong>
-    <%= coin.acronym %>
-  </p>
+  <div class="card text-center">
+    <div class="card-body">
+      <h5 class="card-title"><strong>Description:</strong>
+        <%= coin.description %></h5>
+      <p class="card-text"> <strong>Acronym:</strong>
+        <%= coin.acronym %></p>
+      <%= image_tag coin.url_image, size: '25x25' %>
 
-  <p>
-    <strong>Url image:</strong>
-    <%= image_tag coin.url_image, size: '25x25' %>
-  </p>
-
+      <p>
+        <%= button_to t('links.delete'), @coin, method: :delete, class: 'btn btn-danger' %>
+      </p>
+    </div>
+  </div>
+  <br>
 </div>

@@ -1,12 +1,18 @@
 <div id="<%= dom_id mining_type %>">
-  <p>
-    <strong>Description:</strong>
-    <%= mining_type.description %>
-  </p>
 
-  <p>
-    <strong>Acronym:</strong>
-    <%= mining_type.acronym %>
-  </p>
+  <div class="card text-center">
+    <div class="card-body">
+      <h5 class="card-title"><strong>Description:</strong>
+        <%= mining_type.description %></h5>
+      <p class="card-text"> <strong>Acronym:</strong>
+        <%= mining_type.acronym %></p>
+
+      <p>
+        <%= button_to t('links.delete'), @mining_type, method: :delete, class: 'btn btn-danger' %>
+
+      </p>
+    </div>
+  </div>
+  <br>
 
 </div>
