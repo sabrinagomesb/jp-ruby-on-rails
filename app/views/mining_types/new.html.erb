@@ -1,9 +1,9 @@
-<h1>New mining type</h1>
+<h1><%= t('links.new_mining_type') %></h1>
 
 <%= render "form", mining_type: @mining_type %>
 
 <br>
 
 <div>
-  <%= link_to "Back to mining types", mining_types_path %>
+  <%= link_to t('links.back'), mining_types_path, class: 'btn btn-outline-primary' %>
 </div>

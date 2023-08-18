@@ -11,17 +11,17 @@
     </div>
   <% end %>
 
-  <div>
+  <div class="form-group">
     <%= form.label :description, style: "display: block" %>
-    <%= form.text_field :description %>
+    <%= form.text_field :description, class: "form-control" %>
   </div>
 
-  <div>
+  <div class="form-group">
     <%= form.label :acronym, style: "display: block" %>
-    <%= form.text_field :acronym %>
+    <%= form.text_field :acronym, class: "form-control" %>
   </div>
-
-  <div>
-    <%= form.submit %>
+  <br>
+  <div class="form-group">
+    <%= form.submit nil, class: 'btn btn-outline-primary' %>
   </div>
 <% end %>
