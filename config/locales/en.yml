@@ -42,6 +42,13 @@ en:
     delete: 'Delete'
     new_mining_type: 'New mining type'
     new_coin: 'New coin'
+    back: 'Back'
+  editing:
+    coin: 'Editing coin'
+    mining_type: 'Editing mining type'
+  showing:
+    coin: 'Coin details'
+    mining_type: 'Mining type details'
   thead:
     coins: 'Coins'
     mining_types: 'Mining Types'

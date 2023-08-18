@@ -42,6 +42,13 @@ pt-br:
     delete: 'Apagar'
     new_mining_type: 'Cadastrar Tipo de Mineração'
     new_coin: 'Cadastrar Moeda'
+    back: 'Voltar'
+  editing:
+    coin: 'Editando Moeda'
+    mining_type: 'Editando Tipo de Mineração'
+  showing:
+    coin: 'Detalhes da Moeda'
+    mining_type: 'Detalhes do Tipo de Mineração'
   thead:
     coins: 'Moedas'
     mining_types: 'Tipos de Minerações'
